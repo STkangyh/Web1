@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+h1 {
+    font-size: 42px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ol {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    width: 100px;
+    padding: 15px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr;
+}
+#grid ol{
+    padding-left: 38px;
+}
+#grid #article {
+    padding-left: 25px;
+    border-bottom: 1px solid gray;
+}
+@media(max-width:600px){
+    #grid{
+        display: block;
+    }
+    #grid ol{
+        border: none;
+    }
+    h1, #grid #article {
+        border: none;
+    }
+}
