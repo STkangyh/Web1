@@ -6,16 +6,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="night_day" type="button" value="night" onclick="
-    if (document.querySelector('#night_day').value==='night'){
-        document.querySelector('body').style.background='black';
-        document.querySelector('body').style.color='white';
-        document.querySelector('#night_day').value='day';
+    <input type="button" value="night" onclick="
+    const target = document.querySelector('body');
+    if (this.value==='night'){
+        target.style.background='black';
+        target.style.color='white';
+        this.value='day';
     }
     else {
-        document.querySelector('body').style.background='white';
-        document.querySelector('body').style.color='black';
-        document.querySelector('#night_day').value='night';
+        target.style.background='white';
+        target.style.color='black';
+        this.value='night';
     }
     ">
     <h1><a href="Index.html">WEB</a></h1>
@@ -36,7 +37,6 @@
         for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different
         implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting
         the spec fully, and with many engines supporting additional features beyond ECMA.
-      </p>
     </div>
   </div>
 </body>
