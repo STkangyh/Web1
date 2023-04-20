@@ -12,11 +12,24 @@
         target.style.background='black';
         target.style.color='white';
         this.value='day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color = 'powderblue';
+            i++;
+        }
     }
     else {
         target.style.background='white';
         target.style.color='black';
         this.value='night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color = 'blue';
+            i++;
+        }
     }
     ">
     <h1><a href="Index.html">WEB</a></h1>
