@@ -4,33 +4,45 @@
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+    <script>
+        let Link = {
+            setColor:function LinksetColor(color){
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i<alist.length){
+                    alist[i].style.color = color;
+                    i++;
+                }
+            }
+        }
+        let Body = {
+            setColor: function (color){
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor: function(color) {
+                document.querySelector('body').style.background=color;
+            }
+        };
+        function nightDayhandler(self){
+
+            if (self.value==='night'){
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value='day';
+                Link.setColor('powderblue');
+            }
+            else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value='night';
+                Link.setColor('black');
+            }
+        }
+    </script>
 </head>
 <body>
     <input type="button" value="night" onclick="
-    const target = document.querySelector('body');
-    if (this.value==='night'){
-        target.style.background='black';
-        target.style.color='white';
-        this.value='day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color = 'powderblue';
-            i++;
-        }
-    }
-    else {
-        target.style.background='white';
-        target.style.color='black';
-        this.value='night';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color = 'blue';
-            i++;
-        }
-    }
+        nightDayhandler(this);
     ">
     <h1><a href="Index.html">WEB</a></h1>
     <div id="grid">
